@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 
+
 describe('GEt link member and validate fields for planCodeTest', () =>
   {
     let data;
@@ -17,7 +18,7 @@ describe('GEt link member and validate fields for planCodeTest', () =>
         method : 'GET',
         url : data.url,
         headers : {
-          Authorization : Cypress.env('AUTHORIZATION'),
+          Authorization : Cypress.env('auth'),
           Accept : "application/json"
         },    
     }).then(function(response){
