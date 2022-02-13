@@ -9,8 +9,8 @@ describe('GEt link member and validate fields for planCodeTest', () =>
       });
     });
 
-
-
+    var auth = Cypress.env('AUTHORIZATION')
+    console.log(auth)
     it('Check if response retuens json with 200', () => 
     {
       cy.request({
