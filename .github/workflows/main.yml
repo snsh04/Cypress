@@ -16,7 +16,7 @@ jobs:
       # and run all Cypress tests
       - name: Echo auth
         run: |
-          run: echo "$AUTHORIZATION"
+          echo $AUTHORIZATION
 
 
       - name: Cypress run 
