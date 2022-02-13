@@ -15,7 +15,8 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
 
-      - name: Cypress run 
+
+      - name: Cypress run --env AUTHORIZATION=${{secrets.AUTHORIZATION}}
 
         uses: cypress-io/github-action@v2
         with: 
