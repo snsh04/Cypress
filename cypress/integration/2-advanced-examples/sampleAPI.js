@@ -27,8 +27,6 @@ describe('GEt link member and validate fields for planCodeTest', () =>
 
     })
 
-    
-
   })
 
 
