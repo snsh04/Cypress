@@ -17,7 +17,7 @@ describe('GEt link member and validate fields for planCodeTest', () =>
         method : 'GET',
         url : data.url,
         headers : {
-          Authorization : Cypress.env('Authorization'),
+          Authorization : Cypress.env('AUTHORIZATION'),
           Accept : "application/json"
         },    
     }).then(function(response){
