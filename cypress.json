@@ -1,5 +1,6 @@
 {
     "projectId": "gbzbdc",
     "defaultCommandTimeout":15000,
+    "AUTHORIZATION" : "Basic cmVzdC5pbnRlZ3JhdGlvbmdhdGV3YXkuMTpBPmpwTlB4W0BlN2dfdFlxOFcrQm5TU0VWSCxRYnc5KA==",
     "Content-Type" : "application/x-www-form-urlencoded"
 }
