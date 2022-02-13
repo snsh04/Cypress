@@ -11,10 +11,10 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
 
-      - name: Publish package
+      - name: copy secrets
         run: |
           sed -i 's/${AUTHORIZATION}/${{ env.AUTHORIZATION }}/g' cypress.env.json
-          npm publish
+
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           AUTHORIZATION: ${{secrets.AUTHORIZATION}}
