@@ -11,14 +11,15 @@ describe('GEt link member and validate fields for planCodeTest', () =>
     });
 
 
-    const authToken = process.env.TOKEN
+    let authToken = process.env.TOKEN
+    console.log(authToken)
     it('Check if response retuens json with 200', () => 
     {
       cy.request({
         method : 'GET',
         url : data.url,
         headers : {
-          Authorization : authToken,
+          Authorization : 'Bearer ' + authToken,
           Accept : "application/json"
         },    
     }).then(function(response){
