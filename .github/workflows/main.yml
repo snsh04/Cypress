@@ -16,8 +16,8 @@ jobs:
 
       - name: Cypress run 
         run: |
-        node_modules/.bin/cypress run --env Auth=${{secrets.AUTHORIZATION}}
-        echo "$Auth"
+          node_modules/.bin/cypress run --env Auth=${{secrets.AUTHORIZATION}}
+          echo "$Auth"
         with: 
           record: true
         env: 
