@@ -11,5 +11,8 @@
   "devDependencies": {
     "cypress": "^9.4.1",
     "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
   }
 }

@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-
+require('dotenv').config();
 
 describe('GEt link member and validate fields for planCodeTest', () =>
   {
@@ -9,17 +9,16 @@ describe('GEt link member and validate fields for planCodeTest', () =>
           data = fData;
       });
     });
+    console.log('test')
 
-
-    let authToken = process.env.TOKEN
-    console.log(authToken)
+    let token = process.env.Token
     it('Check if response retuens json with 200', () => 
     {
       cy.request({
         method : 'GET',
         url : data.url,
         headers : {
-          Authorization : 'Bearer ' + authToken,
+          Authorization : Cypress.env('Auth'),
           Accept : "application/json"
         },    
     }).then(function(response){
