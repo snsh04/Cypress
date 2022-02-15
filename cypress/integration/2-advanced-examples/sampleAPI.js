@@ -16,7 +16,7 @@ describe('GEt link member and validate fields for planCodeTest', () =>
     {
       cy.request({
         method : 'GET',
-        url : token,
+        url : data.url,
         headers : {
           Authorization : 'Bearer '+ token,
           Accept : "application/json"
