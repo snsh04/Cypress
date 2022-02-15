@@ -16,7 +16,7 @@ jobs:
 
       - name: Cypress run 
         run: |
-          node_modules/.bin/cypress run --record --env Auth=${{secrets.AUTHORIZATION}},CYPRESS_RECORD_KEY = ${{secrets.CYPRESS_RECORD_KEY}},GITHUB_TOKEN = ${{secrets.GIHUB_TOKEN}}
+          cypress run --record --env Auth=${{secrets.AUTHORIZATION}}, CYPRESS_RECORD_KEY = ${{secrets.CYPRESS_RECORD_KEY}}, GITHUB_TOKEN = ${{secrets.GIHUB_TOKEN}}
           echo "$Auth"
           
           
