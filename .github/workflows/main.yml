@@ -15,8 +15,7 @@ jobs:
 
 
       - name: Cypress run 
+        uses: cypress-io/github-action@v2
         run: |
           cypress run --record --env Auth=${{secrets.AUTHORIZATION}}, CYPRESS_RECORD_KEY = ${{secrets.CYPRESS_RECORD_KEY}}, GITHUB_TOKEN = ${{secrets.GIHUB_TOKEN}}
           echo "$Auth"
-          
-          
