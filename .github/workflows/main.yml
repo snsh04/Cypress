@@ -4,7 +4,7 @@ on: [push]
 
 
 env:
-  AUTHORIZATION: ${{secrets.AUTHORIZATION}}
+  TOKEN: ${{secrets.AUTHORIZATION}}
 
 jobs:
   cypress-run:
@@ -24,6 +24,6 @@ jobs:
         env: 
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
           GITHUB_TOKEN: ${{secrets.GIHUB_TOKEN}}
-          CYPRESS_auth: ${{secrets.AUTHORIZATION}}
+          TOKEN: ${{secrets.AUTHORIZATION}}
           
 

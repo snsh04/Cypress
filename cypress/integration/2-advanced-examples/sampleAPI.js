@@ -11,14 +11,14 @@ describe('GEt link member and validate fields for planCodeTest', () =>
     });
 
 
-
+    const authToken = process.env.TOKEN
     it('Check if response retuens json with 200', () => 
     {
       cy.request({
         method : 'GET',
         url : data.url,
         headers : {
-          Authorization : Cypress.env('auth'),
+          Authorization : authToken,
           Accept : "application/json"
         },    
     }).then(function(response){
