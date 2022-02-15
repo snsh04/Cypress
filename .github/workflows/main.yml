@@ -11,11 +11,9 @@ jobs:
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-
-
-
-      - name: Cypress run 
+      - name: Cypress run with env
         uses: cypress-io/github-action@v2
-        run: |
-          cypress run --record --env Auth=${{secrets.AUTHORIZATION}}, CYPRESS_RECORD_KEY = ${{secrets.CYPRESS_RECORD_KEY}}, GITHUB_TOKEN = ${{secrets.GIHUB_TOKEN}}
-          echo "$Auth"
+        env:
+          CYPRESS_Auth: ${{secrets.AUTHORIZATION}}
+          CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+          GITHUB_TOKEN: ${{secrets.GIHUB_TOKEN}}

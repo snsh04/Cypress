@@ -11,12 +11,12 @@ describe('GEt link member and validate fields for planCodeTest', () =>
     });
     console.log('test')
 
-    let token = process.env.Token
+    let token = Cypress.env('Auth')
     it('Check if response retuens json with 200', () => 
     {
       cy.request({
         method : 'GET',
-        url : data.url,
+        url : token,
         headers : {
           Authorization : Cypress.env('Auth'),
           Accept : "application/json"
